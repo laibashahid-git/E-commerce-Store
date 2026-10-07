@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLUSHÉ - Girly Makeup Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">BLUSHÉ</div>
+            <ul>
+                <li>Shop</li>
+                <li>Bestsellers</li>
+            </ul>
+            <div class="cart" id="cartBtn" onclick="openCart()">🛍️ <span id="cart-count">0</span></div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Soft Glam <br> Starts With <i>Blushé</i></h1>
+            <p>Cruelty-free, girly, and made for your everyday glow.</p>
+            <button class="main-btn" onclick="scrollToProducts()">Shop Now →</button>
+        </div>
+        <div class="hero-img">
+            <div class="circle">💄</div>
+        </div>
+    </section>
+
+    <section class="products" id="products">
+        <h2>Our Bestsellers</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="img" style="background:#ffd6e0">💋</div>
+                <h3>Velvet Lip Tint</h3>
+                <p>$18.00</p>
+                <button onclick="addToCart('Velvet Lip Tint', 18)">Add to Bag</button>
+            </div>
+            <div class="card">
+                <div class="img" style="background:#ffcad4">🌸</div>
+                <h3>Cloud Blush</h3>
+                <p>$22.00</p>
+                <button onclick="addToCart('Cloud Blush', 22)">Add to Bag</button>
+            </div>
+            <div class="card">
+                <div class="img" style="background:#ffe5d9">✨</div>
+                <h3>Glow Highlighter</h3>
+                <p>$24.00</p>
+                <button onclick="addToCart('Glow Highlighter', 24)">Add to Bag</button>
+            </div>
+            <div class="card">
+                <div class="img" style="background:#f8edeb">💄</div>
+                <h3>Soft Matte Lipstick</h3>
+                <p>$20.00</p>
+                <button onclick="addToCart('Soft Matte Lipstick', 20)">Add to Bag</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CART PAGE -->
+    <div id="cartPage" class="cart-page">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Your Bag 🛍️</h2>
+                <span class="close" onclick="closeCart()">✖</span>
+            </div>
+            <div id="cart-items">
+                <p class="empty">Your bag is empty 💖</p>
+            </div>
+            <div class="cart-footer">
+                <h3>Total: $<span id="total">0</span></h3>
+                <button class="checkout-btn">Checkout →</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast">Added to bag! 💖</div>
+    <script src="script.js"></script>
+</body>
+</html>
